@@ -1,0 +1,179 @@
+body {
+    background: #38404B;
+    color:white;
+}
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#add-task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    height: 40px;
+    padding: 20px 30px;
+    margin-top: 75px;
+    margin-bottom: 100px;
+
+    border-radius: 16px;
+    background: #38404B;
+    box-shadow: 3px 3px 8px 0px rgba(46, 53, 62, 0.90) inset, -3px -3px 6px 0px rgba(66, 75, 88, 0.90) inset, 3px -3px 6px 0px rgba(46, 53, 62, 0.20) inset, -3px 3px 6px 0px rgba(46, 53, 62, 0.20) inset, -1px -1px 2px 0px rgba(46, 53, 62, 0.50), 1px 1px 2px 0px rgba(66, 75, 88, 0.30);
+   
+}
+#taskInput {
+    background: #38404B;
+    color: rgba(148, 173, 207, 0.70);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 100%;
+    width: 80%;
+    box-shadow: none;
+    border: 0;
+    
+}
+img {
+    width: 10%;
+    height: 50%;
+}
+header {
+    width: 80%;
+    justify-content: right;
+    gap:20%;
+    display: flex;
+    align-items: center;
+}
+#taskList {
+    display: flex;
+    width: 80%;
+    justify-content: start;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+ul li img {
+    height: 18px;
+    width: 18px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    padding:0 30px;
+    height: 80px;
+    width: 40%;
+    fill: #38404B;
+    box-shadow: 5px 5px 13px 0px rgba(48, 54, 64, 0.90), -5px -5px 10px 0px rgba(64, 74, 86, 0.90), 5px -5px 10px 0px rgba(48, 54, 64, 0.20), -5px 5px 10px 0px rgba(48, 54, 64, 0.20), -1px -1px 2px 0px rgba(48, 54, 64, 0.50) inset, 1px 1px 2px 0px rgba(64, 74, 86, 0.30) inset;
+
+    color: #94ADCF;
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 20px;
+}
+.button-add{
+    display: none;
+}
+.input-adaptive-title{
+    color: #94ADCF;
+    display: none;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.completed h1{
+    margin: 50px 0;
+    color: #94ADCF;
+
+    font-family: Ubuntu;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.completed ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.completed {
+    width: 80%;
+}
+
+
+@media (max-width:1024px){
+    #add-task-container{
+        width: 60%;
+    }
+    header{
+        gap:10%;
+    }
+    ul li{
+        width: 35%;
+    }
+    ul{
+        width: 90%;
+        justify-content: center;
+    }
+}
+@media (max-width:480px) {
+    ul{
+        width: 80%;
+    }
+    ul li{
+        width: 100%;
+        height:40px;
+        font-size: 16px;
+    }
+    ul li img {
+        height: 10px;
+        width: 10px;
+    }
+    header{justify-content: space-between;
+    align-items: end;
+    }
+    #add-task-container.active{
+        position: absolute;
+        bottom: 80px;
+        width: 65%;
+        display: flex;
+    }
+    #add-task-container {
+        display: none;
+    }
+    #taskList,#completedList{     
+        gap:30px;
+        margin: 30px 0 ;
+    }
+    .completed h1{
+        font-size: 18px;
+        margin: 0;
+    }
+    .input-adaptive-title {
+        display: inline;
+        margin-top:60px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .button-add{
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        bottom:65px;
+        right: 30px;
+    }
+}
